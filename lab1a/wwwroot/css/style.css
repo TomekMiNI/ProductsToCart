@@ -1,0 +1,82 @@
+﻿body {
+    margin: 0px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table tr th, table tr td {
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+#order, #products, #cart {
+    padding: 0px 20px;
+}
+
+#products {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#cart {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 40%;
+    background-color: gainsboro;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.product {
+    display: block;
+    float: left;
+    margin: 5px 10px 5px 0px;
+    border: 2px solid black;
+    padding: 0px 8px 6px 8px;
+    width: 240px;
+    background-color: #E5CEA2;
+}
+
+.product .name {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.product .price, .product .quantity {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.product form input[type=number] {
+    width: 70px;
+}
+
+.controlButtons {
+    display: block;
+    clear: both;
+}
+
+#error {
+    color: red;
+    font-size: 24px;
+    padding: 20px;
+}

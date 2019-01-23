@@ -1,0 +1,82 @@
+﻿@page
+@{
+    <!DOCTYPE html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>WWW - Task 3</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <!-- Remove style="display: none;" and add it to #products and #cart to show order summary -->
+        <!-- Order summary should be visible only when user checkout the order -->
+        <div id="order" style="display: none;">
+            <h2>Order Summary:</h2>
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price per product</th>
+                    <th>Quantity</th>
+                </tr>
+                <!-- Iterate through all products in order START -->
+                <tr>
+                    <td><!-- TODO: Product name --></td>
+                    <td><!-- TODO: Product price --> zł</td>
+                    <td><!-- TODO: Product quantity --></td>
+                </tr>
+                <!-- Iterate through all products in order END -->
+            </table>
+            <p><strong>Total price: </strong><!-- TODO: Total price --> zł</p>
+            <a href="<!-- TODO: Appropriate link -->"><input type="button" value="Create new order"></a>
+        </div>
+
+        <div id="error" style="display: none;">
+            ERROR<!-- Display if error occurs -->
+        </div>
+
+        <div id="products">
+            <h2>Products:</h2>
+
+            <!-- Iterate through all products in warehouse START -->
+            <div class="product">
+                <form method="get" action="Default.aspx">
+                    <p class="name">Product name <!-- TODO: Product name--></p>
+                    <p class="price"><strong>Price: </strong><!-- Product price --> zł</p>
+                    <span class="quantity"><strong>Quantity: </strong></span><input type="number" name="quantity" value="1" min="1" />
+                    <!-- Add some hidden inputs to pass additional data -->
+                    <input type="submit" value="Add to cart" />
+                </form>
+            </div>
+            <!-- Iterate through all products in warehouse END -->
+
+        </div>
+        <div id="cart">
+            <h2>Cart:</h2>
+
+            <p>Cart is empty!</p><!-- This should be visible only when cart is empty -->
+            <!-- Iterate through all products in cart START -->
+            <div class="product">
+                <p class="name">Product name <!-- TODO: Product name--></p>
+                <p class="price"><strong>Price per product: </strong><!-- Product price --> zł</p>
+                <p class="quantity">
+                    <strong>Quantity: </strong><!-- Product quantity -->
+                    <a href="<!-- TODO: Appropriate link -->"><input type="button" value="+" /></a>
+                    <a href="<!-- TODO: Appropriate link -->"><input type="button" value="-" /></a>
+                </p>
+                <form method="get" action="Default.aspx">
+                    <!-- Add some hidden inputs to pass additional data -->
+                    <input type="submit" value="Remove from cart" />
+                </form>
+            </div>
+            <!-- Iterate through all products in cart END -->
+            <!-- Show control buttons only when there are some products in the cart -->
+            <div class="controlButtons">
+                <a href="<!-- TODO: Appropriate link -->"><input type="button" value="ClearCart" /></a>
+                <a href="<!-- TODO: Appropriate link -->"><input type="button" value="Checkout" /></a>
+            </div>
+        </div>
+
+    </body>
+</html>
+}
